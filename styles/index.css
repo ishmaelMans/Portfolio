@@ -436,7 +436,8 @@ main {
 #section__C h2,
 #section__D h2,
 #section__E h2, 
-#section__F h2 {
+#section__F h2,
+#recent__works h2 {
   font-size: 2rem;
   padding-top: 50px;
 }
@@ -444,7 +445,9 @@ main {
 #section__C h3,
 #section__D h3,
 #section__E h3,
-#section__F h3{
+#section__F h3,
+#recent__works h3
+{
   padding: 10px 0 40px 0;
   font-weight: 400;
   color:#45b835;
@@ -687,6 +690,96 @@ svg {
 }
 /* section-D starts.............................*/
 
+/* recent works */
+#recent__works {
+  min-width: 100%;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dark-color);
+  text-align: center;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
+  overflow: hidden;
+}
+
+#recent__works .projects{
+  display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+#recent__works .projects .box{
+  position: relative;
+  width: 22vw;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#recent__works .projects .box .title{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#recent__works .projects .box .title a{
+  /* background: var(--green-color); */
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid var(--green-color);
+}
+#recent__works .projects .box .title a:hover{
+  background:var(--green-color);
+  /* background: #000 !important; */
+}
+
+#recent__works .projects .box > .title{
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color:var(--green-color); */
+  background-color: #000;
+  color: white;
+    padding: 20px;
+  border-radius: 5px;
+}
+
+#recent__works .projects .box:hover > .title{
+  opacity: 1;
+}
+
+#recent__works .projects .box:hover img{
+  filter: blur(.5px);
+  filter: grayscale(100%);
+}
+
+#recent__works .projects .box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* End recent works */
+
 /* section-E Reviews starts.............................*/
 #section__E {
   min-width: 100%;
@@ -777,9 +870,48 @@ svg {
       display: none;
     }
 
+    #recent__works .projects .box {
+      position: relative;
+      width: 50vw;
+      height: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+}
+@media only screen and (max-width: 650px){
+
+  #recent__works .projects {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(1, auto);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  #recent__works .projects .box {
+    position: relative;
+    width: 50vw;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 980px){
+  #recent__works .projects .box {
+      position: relative;
+      width: 35vw;
+      height: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
 }
 
 @media only screen and (min-width: 980px) {
+  
+
   html {
     scroll-padding-top: 6rem;
   }
