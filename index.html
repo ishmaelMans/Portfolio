@@ -35,9 +35,9 @@
 
       <div class="desk__nav">
         <ul>
-          <li><a class="check current" href="#">Home</a></li>
-          <li><a class="check" href="#section__B">About</a></li>
-          <li><a class="check" href="#recent__works">Works</a></li>
+          <li><a class="check current" href="/" onclick="event.preventDefault(); window.location.hash='#'; history.replaceState(null, '', '/home');">Home</a></li>
+          <li><a class="check" href="/about" onclick="event.preventDefault(); window.location.hash='#section__B'; history.replaceState(null, '', '/about');">About</a></li>
+          <li><a class="check" href="/works" onclick="event.preventDefault(); window.location.hash='#recent__works'; history.replaceState(null, '', '/works');">Works</a></li>
           <li><a class="check" href="#section__F">Contact</a></li>
           <li><a class="check" rel="noopener" href="https://drive.google.com/file/d/13FHXS2GaoipHOUup1yrbIdzjOgxGOYNz/view?usp=drive_link" target="_blank">Resume</a></li>
         </ul>
