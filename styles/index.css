@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --nav-color: #555555;
+  --nav-color: #171717;
   --dark-color: #fff;
   --green-color: #45b835;
   --text-color: #555;
@@ -66,6 +66,16 @@ a {
   width: 30px;
   height: 30px;
 } */
+
+ .contact__icon{
+  display: flex;
+  font-size: 1.6rem;
+  width: 90px;
+}
+
+.contact__icon a{
+   margin-right: 25px;
+ }
 
 .open__slide {
   display: block;
@@ -150,11 +160,12 @@ a {
 }
 /* hamburger-menu...............................*/
 .menu__btn {
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 30px;
+    /* width: 30px; */
     height: 30px;
     cursor: pointer;
     transition: all .5s ease-in-out;

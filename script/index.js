@@ -40,7 +40,7 @@ const navAnimation = () => {
   if (lastScrollY < window.scrollY) {
     navBar.classList.add("active");
   } else {
-    navBar.classList.remove("active");
+    navBar.classList.add("active");
   }
   lastScrollY = window.scrollY;
 };
