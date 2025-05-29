@@ -839,8 +839,11 @@ svg {
   transition: transform 0.5s linear;
 }
 #section__E .carousel__box h2 {
+  font-size: 1.5rem;
   line-height: 1.2;
-  transition: transform 0.5s linear;
+}
+#section__E .carousel__box h3 {
+ padding-bottom: 10px;
 }
 #section__E .container {
   min-width: 410px;
