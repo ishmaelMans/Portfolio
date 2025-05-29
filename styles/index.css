@@ -838,6 +838,10 @@ svg {
   display: flex;
   transition: transform 0.5s linear;
 }
+#section__E .carousel__box h2 {
+  line-height: 1.2;
+  transition: transform 0.5s linear;
+}
 #section__E .container {
   min-width: 410px;
   height: 400px;
