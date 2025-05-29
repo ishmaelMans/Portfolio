@@ -35,6 +35,22 @@ a {
   display: inline-block;
 } */
 
+.fade__in{
+  animation: scroll 1s ease-in-out;
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }50%{
+    opacity: 0.5;
+  }100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* navbar Starts....................................... */
 .navbar {
   width: 100%;

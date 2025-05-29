@@ -2,6 +2,7 @@ const btnClose = document.querySelector(".side__menu");
 const menuBtn = document.querySelector(".menu__btn");
 const btnOpen = document.querySelector(".open__slide");
 const scrollElement = document.querySelectorAll(".skill__per");
+const fadeElement = document.querySelectorAll(".fade__in");
 const list = document.querySelectorAll(".side__menu li");
 const navBar = document.querySelector(".navbar");
 const checkList = document.querySelectorAll(".check");
@@ -50,6 +51,10 @@ scrollElement.forEach((el) => {
   per = el.getAttribute("per");
   el.style.width = per;
 });
+fadeElement.forEach((el) => {
+  per = el.getAttribute("per");
+  el.style.width = per;
+});
 
 const elementInView = (el) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -69,6 +74,12 @@ const displayScrollElement = (element) => {
 const hideScrollElement = (element) => {
   element.classList.remove("progress");
 };
+const displayFadeElement = (element) => {
+  element.classList.add("fade__in");
+};
+const hideFadeElement = (element) => {
+  element.classList.remove("fade__in");
+};
 const handleScrollAnimation = () => {
   scrollElement.forEach((el) => {
     if (elementInView(el)) {
@@ -77,6 +88,14 @@ const handleScrollAnimation = () => {
       hideScrollElement(el);
     }
   });
+  fadeElement.forEach((el) => {
+    if (elementInView(el)) {
+      displayFadeElement(el);
+    } else if (elementOutofView(el)) {
+      hideFadeElement(el);
+    }
+  });
+  // fade-in section with transform 
 };
 window.addEventListener("scroll", () => {
   handleScrollAnimation();
